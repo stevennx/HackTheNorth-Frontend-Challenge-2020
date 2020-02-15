@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/hackthenorth-frontend-challenge-2020/static/css/main.d1b05096.chunk.css",
+    "main.js": "/hackthenorth-frontend-challenge-2020/static/js/main.64799a4f.chunk.js",
+    "main.js.map": "/hackthenorth-frontend-challenge-2020/static/js/main.64799a4f.chunk.js.map",
+    "runtime-main.js": "/hackthenorth-frontend-challenge-2020/static/js/runtime-main.735ad6ef.js",
+    "runtime-main.js.map": "/hackthenorth-frontend-challenge-2020/static/js/runtime-main.735ad6ef.js.map",
+    "static/js/2.5e51fb83.chunk.js": "/hackthenorth-frontend-challenge-2020/static/js/2.5e51fb83.chunk.js",
+    "static/js/2.5e51fb83.chunk.js.map": "/hackthenorth-frontend-challenge-2020/static/js/2.5e51fb83.chunk.js.map",
+    "index.html": "/hackthenorth-frontend-challenge-2020/index.html",
+    "precache-manifest.bc53cfd6a5b855e68ae481739468bd66.js": "/hackthenorth-frontend-challenge-2020/precache-manifest.bc53cfd6a5b855e68ae481739468bd66.js",
+    "service-worker.js": "/hackthenorth-frontend-challenge-2020/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/hackthenorth-frontend-challenge-2020/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.5e51fb83.chunk.js.LICENSE.txt": "/hackthenorth-frontend-challenge-2020/static/js/2.5e51fb83.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/hackthenorth-frontend-challenge-2020/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.735ad6ef.js",
+    "static/js/2.5e51fb83.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.64799a4f.chunk.js"
+  ]
+}
