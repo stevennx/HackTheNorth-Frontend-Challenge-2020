@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/HackTheNorth-Frontend-Challenge-2020/precache-manifest.b4f60f39e2fb7fff5cbc5331b7c788ba.js"
+  "/HackTheNorth-Frontend-Challenge-2020/precache-manifest.ba7f8b9f7ae08b2526ce977e7a87c4bf.js"
 );
 
 self.addEventListener('message', (event) => {
