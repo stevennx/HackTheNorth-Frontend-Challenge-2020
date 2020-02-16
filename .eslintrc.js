@@ -16,10 +16,16 @@ module.exports = {
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     "indent": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
   },
   settings: {
     react: {
       version: "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
     }
-  }
+  },
+  plugins: [
+    "react",
+    "react-hooks"
+  ]
 };
