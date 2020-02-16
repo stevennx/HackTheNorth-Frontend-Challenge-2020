@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CardContainer from "../CardContainer";
+import LoginCard from "../LoginCard";
 
 const BackgroundContainer = styled.div`
   display: flex;
@@ -10,23 +11,15 @@ const BackgroundContainer = styled.div`
   width: 100vw;
   height: 100vh;
 
-  div {
+  * {
     box-sizing: border-box;
-  }
-
-  span,
-  a,
-  div {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 22px;
   }
 `;
 
 const Background = () => (
   <BackgroundContainer>
     <CardContainer>
-      <div id="temp">{"hello world"}</div>
+      <LoginCard/>
     </CardContainer>
   </BackgroundContainer>
 );

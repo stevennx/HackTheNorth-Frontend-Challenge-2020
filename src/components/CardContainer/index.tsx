@@ -6,9 +6,10 @@ interface Props {
     children?: any;
 }
 const Container = styled.div`
-    width: 600px;
-    height: 600px;
-    background: white;
+    width: 400px;
+    height: 550px;
+    background: #4d3585;
+    padding: 40px 20px;
 `
 
 
