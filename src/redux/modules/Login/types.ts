@@ -6,11 +6,11 @@ export interface Credentials {
   password: string;
 }
 
-export interface Response {
+export interface Request {
     errorMessage: string | null
 }
 
 export type LoginActionType = {
   type: typeof LOGIN_USER_SUCCESS | typeof LOGIN_USER_ERROR;
-  payload: Response;
+  payload: Request;
 };
