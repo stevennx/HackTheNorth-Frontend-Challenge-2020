@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import CardContainer from "../CardContainer";
-import LoginCard from "../LoginCard";
+
+interface Props {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children?: any;
+}
 
 const BackgroundContainer = styled.div`
   display: flex;
@@ -16,10 +19,17 @@ const BackgroundContainer = styled.div`
   }
 `;
 
-const Background = () => (
+const CardContainer = styled.div`
+    width: 400px;
+    height: 550px;
+    background: #4d3585;
+    padding: 40px 20px;
+`
+
+const Background: React.FC<Props> = ({ children }) => (
   <BackgroundContainer>
     <CardContainer>
-      <LoginCard/>
+      {children}
     </CardContainer>
   </BackgroundContainer>
 );

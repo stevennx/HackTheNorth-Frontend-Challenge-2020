@@ -7,13 +7,13 @@ export default (state = {}, action: LoginActionType) => {
       return {
         ...state,
         ...action.payload,
-        loggedIn: true
+        isAuthenticated: true
       };
     case LOGIN_USER_ERROR:
       return {
         ...state,
         ...action.payload,
-        loggedIn: false
+        isAuthenticated: false
       };
     default:
       return state;
