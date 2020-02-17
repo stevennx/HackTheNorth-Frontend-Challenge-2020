@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Logo from "../../static/not_hack_the_north.png"
-import Form from "../shared/Form";
+import LoginForm from "../LoginForm";
 
 const LoginCardContainer = styled.div`
     display: flex;
@@ -27,7 +27,8 @@ const LoginCard = () => (
     <LoginCardContainer>
         <Image src={Logo} alt=""/>
         <Title>Login</Title>
-        <Form></Form>
+        <LoginForm/>
+        <div></div>
     </LoginCardContainer>
 );
 

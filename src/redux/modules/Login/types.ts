@@ -7,7 +7,6 @@ export interface Credentials {
 }
 
 export interface Response {
-    credentials: Credentials,
     errorMessage: string | null
 }
 
