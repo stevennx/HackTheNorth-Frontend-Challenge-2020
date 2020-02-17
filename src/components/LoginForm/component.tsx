@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Props } from "./index";
 
@@ -49,7 +49,7 @@ const Button = styled.button`
   }
 `;
 
-const Form: React.FC<Props> = ({ errorMessage, loginAction }) => {
+const Form: React.FC<Props> = ({ loginAction }) => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
