@@ -19,4 +19,4 @@ const App: React.FC<Props>= ({ isAuthenticated }) => (
   </Background>
 );
 
-export default App;
+export default React.memo(App);

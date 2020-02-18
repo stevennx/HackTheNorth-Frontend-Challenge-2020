@@ -94,4 +94,4 @@ const Form: React.FC<Props> = ({ loginAction }) => {
   );
 };
 
-export default Form;
+export default React.memo(Form);
