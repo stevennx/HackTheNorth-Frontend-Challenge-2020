@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import ProfileActionDetails from "../ProfileActionDetails";
+import { Props } from "./index";
 
 const ProfileDetailsContainer = styled.div`
   width: 100%;
@@ -44,23 +45,29 @@ const StatusContainer = styled.div`
   font-size: 12px;
 `;
 
-const ProfileDetails = () => (
-  <ProfileDetailsContainer>
-    <NameIDContainer>
-      <NameContainer>Name: {"Feridun Hamdullahpur"}</NameContainer>
-      <IDContainer>{190258281}</IDContainer>
-    </NameIDContainer>
-    <BioContainer>
-      <BioParagraph>
-        {`A veteran of the hackathon scene, Feridun takes them on with a nonchalant
+const ProfileDetails = ({ profile, requestProfile }: Props) => {
+  useEffect(() => {
+    requestProfile();
+  }, []);
+
+  return (
+    <ProfileDetailsContainer>
+      <NameIDContainer>
+        <NameContainer>Name: {"Feridun Hamdullahpur"}</NameContainer>
+        <IDContainer>{190258281}</IDContainer>
+      </NameIDContainer>
+      <BioContainer>
+        <BioParagraph>
+          {`A veteran of the hackathon scene, Feridun takes them on with a nonchalant
          approach to building a project. You can find him on reddit posting memes 
          about himself before starting his project hours before the deadline. 
          Yet somehow, he almost always places as a finalist ¯\\_(ツ)_/¯`}
-      </BioParagraph>
-    </BioContainer>
-    <StatusContainer>Checked In: {false}</StatusContainer>
-    <ProfileActionDetails />
-  </ProfileDetailsContainer>
-);
+        </BioParagraph>
+      </BioContainer>
+      <StatusContainer>Checked In: {false}</StatusContainer>
+      <ProfileActionDetails />
+    </ProfileDetailsContainer>
+  );
+};
 
 export default ProfileDetails;
