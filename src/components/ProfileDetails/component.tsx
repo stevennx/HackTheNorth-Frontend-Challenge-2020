@@ -46,8 +46,10 @@ const StatusContainer = styled.div`
 `;
 
 const ProfileDetails = ({ profile, requestProfile }: Props) => {
+    
   useEffect(() => {
     requestProfile();
+    // eslint-disable-next-line
   }, []);
 
   return (

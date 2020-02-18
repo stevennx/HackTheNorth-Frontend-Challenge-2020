@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Logo from "../../static/not_hack_the_north.png";
 import ProfileBackgroundImage from "../../static/profile_background.png";
