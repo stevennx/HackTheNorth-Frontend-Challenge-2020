@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Props } from "./index";
+import { useHistory } from "react-router-dom";
 
 const FormContainer = styled.form`
   display: flex;
@@ -53,6 +54,8 @@ const Form: React.FC<Props> = ({ loginAction }) => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
+  const history = useHistory();
+
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     const element = event.target as HTMLInputElement;
@@ -67,7 +70,7 @@ const Form: React.FC<Props> = ({ loginAction }) => {
 
   const handleLogin = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    loginAction({ email: email, password: password });
+    loginAction({ email: email, password: password, history: history});
   };
 
   return (

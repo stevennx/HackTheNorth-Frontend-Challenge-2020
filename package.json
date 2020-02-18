@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "@types/history": "^4.7.5",
     "@types/http-errors": "^1.6.3",
     "@types/jest": "^24.9.1",
     "@types/lodash": "^4.14.149",

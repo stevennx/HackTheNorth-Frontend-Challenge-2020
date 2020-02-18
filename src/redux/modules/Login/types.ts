@@ -1,9 +1,15 @@
+import { History } from "history";
+
 export const LOGIN_USER_SUCCESS = "LOGIN_USER_SUCCESS";
 export const LOGIN_USER_ERROR = "LOGIN_USER_ERROR";
 
 export interface Credentials {
   email: string;
   password: string;
+}
+
+export interface ActionParams extends Credentials {
+  history: History
 }
 
 export interface Request {
