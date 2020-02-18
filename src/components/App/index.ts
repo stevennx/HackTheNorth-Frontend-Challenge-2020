@@ -2,11 +2,11 @@ import { connect } from "react-redux";
 import App from "./component";
 
 const mapStateToProps = (state: any) => ({
-  isAuthenticated: state.isAuthenticated,
+  isAuthenticated: state.userLogin.isAuthenticated,
 });
 
 interface StateProps {
-    isAuthenticated: string
+    isAuthenticated: boolean
 }
 
 export type Props = StateProps;

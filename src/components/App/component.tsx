@@ -10,9 +10,10 @@ const App: React.FC<Props>= ({ isAuthenticated }) => (
   <Background>
     <Router>
       <Switch>
-        <Route exact path="/" component={isAuthenticated ? LoginCard : ProfileCard} />
+        {console.log(isAuthenticated)}
+        <Route exact path="/" component={isAuthenticated ? ProfileCard : LoginCard} />
         <Route path="/login" component={LoginCard} />
-        <Route path="/profile" component={isAuthenticated ? LoginCard : ProfileCard} />
+        <Route path="/profile" component={isAuthenticated ? ProfileCard : LoginCard} />
       </Switch>
     </Router>
   </Background>

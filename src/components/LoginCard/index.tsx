@@ -7,6 +7,8 @@ const LoginCardContainer = styled.div`
     display: flex;
     flex-flow: column wrap;
     align-items: center;
+
+    padding: 40px 20px;
 `
 
 const Image = styled.img`
@@ -28,7 +30,6 @@ const LoginCard = () => (
         <Image src={Logo} alt=""/>
         <Title>Login</Title>
         <LoginForm/>
-        <div></div>
     </LoginCardContainer>
 );
 

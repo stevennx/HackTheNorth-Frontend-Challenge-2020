@@ -1,31 +1,37 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../../static/not_hack_the_north.png"
+import Logo from "../../static/not_hack_the_north.png";
+import ProfileBackgroundImage from "../../static/profile_background.png";
+import ProfileDetails from "../ProfileDetails"
 
-const LoginCardContainer = styled.div`
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-`
+const ProfileCardContainer = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
 
-const Image = styled.img`
+  position: relative;
+`;
+
+const BackgroundImage = styled.img`
+    width: 100%;
+    height: 30%;
+`;
+
+const ProfileImage = styled.img`
+    position: absolute;
+    top: 100px;
+
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
-`
+    width: 125px;
+    height: 125px;
+`;
 
-const Title = styled.span`
-    font-size: 48px;
-    font-weight: 600;
-    margin: 20px 0;
-
-    color: white;
-`
-
-const LoginCard = () => (
-    <LoginCardContainer>
-        xD
-    </LoginCardContainer>
+const ProfileCard = () => (
+  <ProfileCardContainer>
+    <BackgroundImage src={ProfileBackgroundImage} alt={""}/>
+    <ProfileImage src={Logo} alt={""}/>
+    <ProfileDetails/>
+  </ProfileCardContainer>
 );
 
 export default ProfileCard;

@@ -23,7 +23,10 @@ const CardContainer = styled.div`
     width: 400px;
     height: 550px;
     background: #4d3585;
-    padding: 40px 20px;
+    > div {
+      width: 100%;
+      height: 100%;
+    }
 `
 
 const Background: React.FC<Props> = ({ children }) => (
