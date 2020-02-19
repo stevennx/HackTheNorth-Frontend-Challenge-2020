@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/HackTheNorth-Frontend-Challenge-2020/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/HackTheNorth-Frontend-Challenge-2020/static/js/main.27a0f449.chunk.js",
-    "main.js.map": "/HackTheNorth-Frontend-Challenge-2020/static/js/main.27a0f449.chunk.js.map",
+    "main.js": "/HackTheNorth-Frontend-Challenge-2020/static/js/main.ba840839.chunk.js",
+    "main.js.map": "/HackTheNorth-Frontend-Challenge-2020/static/js/main.ba840839.chunk.js.map",
     "runtime-main.js": "/HackTheNorth-Frontend-Challenge-2020/static/js/runtime-main.d4de5334.js",
     "runtime-main.js.map": "/HackTheNorth-Frontend-Challenge-2020/static/js/runtime-main.d4de5334.js.map",
     "static/js/2.fcedc1d8.chunk.js": "/HackTheNorth-Frontend-Challenge-2020/static/js/2.fcedc1d8.chunk.js",
     "static/js/2.fcedc1d8.chunk.js.map": "/HackTheNorth-Frontend-Challenge-2020/static/js/2.fcedc1d8.chunk.js.map",
     "index.html": "/HackTheNorth-Frontend-Challenge-2020/index.html",
-    "precache-manifest.d3c76e29a4ae363189028fdda0101d79.js": "/HackTheNorth-Frontend-Challenge-2020/precache-manifest.d3c76e29a4ae363189028fdda0101d79.js",
+    "precache-manifest.42c8eaba6a242ff00d3f5ec4f6cbe0d2.js": "/HackTheNorth-Frontend-Challenge-2020/precache-manifest.42c8eaba6a242ff00d3f5ec4f6cbe0d2.js",
     "service-worker.js": "/HackTheNorth-Frontend-Challenge-2020/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/HackTheNorth-Frontend-Challenge-2020/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.fcedc1d8.chunk.js.LICENSE.txt": "/HackTheNorth-Frontend-Challenge-2020/static/js/2.fcedc1d8.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.d4de5334.js",
     "static/js/2.fcedc1d8.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.27a0f449.chunk.js"
+    "static/js/main.ba840839.chunk.js"
   ]
 }
