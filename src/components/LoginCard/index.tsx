@@ -15,6 +15,8 @@ const Image = styled.img`
     border-radius: 50%;
     width: 150px;
     height: 150px;
+    pointer-events: none;
+    opacity: 0.9;
 `
 
 const Title = styled.span`
@@ -27,7 +29,7 @@ const Title = styled.span`
 
 const LoginCard = () => (
     <LoginCardContainer>
-        <Image src={Logo} alt=""/>
+        <Image src={Logo} alt="" id="logo"/>
         <Title>Login</Title>
         <LoginForm/>
     </LoginCardContainer>

@@ -23,14 +23,17 @@ const Label = styled.label`
   font-weight: 500;
   margin-bottom: 5px;
 
-  color: white;
+  color: #8a9eb2;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 `;
 
 const Input = styled.input`
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #777;
+  border: 1px solid #20293c;
+  background-color: #20293c;
 `;
 
 const Button = styled.button`
@@ -42,6 +45,10 @@ const Button = styled.button`
   border-radius: 5px;
   border: 1px solid rgb(70, 153, 179);
   background-color: 250ms;
+
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 
   :hover {
     cursor: pointer;
@@ -79,7 +86,6 @@ const Form: React.FC<Props> = ({ loginAction }) => {
       <Input
         name="email"
         type="text"
-        placeholder="Enter your email"
         value={email}
         onChange={handleEmailChange}
       />
@@ -88,11 +94,10 @@ const Form: React.FC<Props> = ({ loginAction }) => {
       <Input
         name="password"
         type="password"
-        placeholder="Enter your password"
         value={password}
         onChange={handlePasswordChange}
       />
-      <Button type="submit">Login</Button>
+      <Button type="submit">LOGIN</Button>
     </FormContainer>
   );
 };

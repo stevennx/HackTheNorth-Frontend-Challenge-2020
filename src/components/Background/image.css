@@ -1,0 +1,12 @@
+svg {
+  background: #070a1c;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+polygon {
+  fill: #070a1c;
+  stroke-width: 1;
+  stroke: #07979b;
+  stroke-opacity: 0.3;
+}
