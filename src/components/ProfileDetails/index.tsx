@@ -59,6 +59,7 @@ const BioParagraph = styled.p`
   line-height: 24px;
   height: 100%;
   margin: 0;
+  padding-right: 16px;
 `;
 
 const StatusContainer = styled.div`
@@ -84,9 +85,6 @@ const ProfileDetails = ({ profile, requestProfile }: Props) => {
       <BioContainer>
         <BioParagraph>{profile && profile.bio}</BioParagraph>
       </BioContainer>
-      <StatusContainer>
-        {checkedIn && `Checked In: ${checkedIn}`}
-      </StatusContainer>
       <ProfileActionDetails />
     </ProfileDetailsContainer>
   );
