@@ -7,7 +7,7 @@ import {
   receiveProfileError,
   receiveProfileFailure
 } from "./actions";
-import { get } from "lodash";
+import get from 'lodash.get';
 import Swal from "sweetalert2";
 import store from "../../store";
 
