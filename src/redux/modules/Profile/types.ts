@@ -1,6 +1,7 @@
-export const GET_PROFILE_REQUEST = 'GET_PROFILE_REQUEST'
-export const GET_PROFILE_SUCCESS= 'GET_PROFILE_SUCCESS'
-export const GET_PROFILE_FAILURE = 'GET_PROFILE_FAILURE'
+export const GET_PROFILE_REQUEST = "GET_PROFILE_REQUEST";
+export const GET_PROFILE_SUCCESS = "GET_PROFILE_SUCCESS";
+export const GET_PROFILE_FAILURE = "GET_PROFILE_FAILURE";
+export const GET_PROFILE_ERROR = "GET_PROFILE_ERROR";
 
 export type AttendeeType = "hacker" | "organizer" | "volunteer" | "sponsor";
 
@@ -24,10 +25,14 @@ export interface AttendeeProfile {
 export type EndpointResponse = AttendeeProfile | null;
 
 export type ProfileActionType = {
-    type: typeof GET_PROFILE_REQUEST | typeof GET_PROFILE_SUCCESS | typeof GET_PROFILE_FAILURE,
-    payload: {
-        isFetching: boolean,
-        profile?: EndpointResponse
-        errorMessage?: string
-    }
-}
+  type:
+    | typeof GET_PROFILE_REQUEST
+    | typeof GET_PROFILE_SUCCESS
+    | typeof GET_PROFILE_FAILURE
+    | typeof GET_PROFILE_ERROR;
+  payload: {
+    isFetching: boolean;
+    profile?: EndpointResponse;
+    errorMessage?: string | null;
+  };
+};

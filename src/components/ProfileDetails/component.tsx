@@ -55,18 +55,15 @@ const ProfileDetails = ({ profile, requestProfile }: Props) => {
   return (
     <ProfileDetailsContainer>
       <NameIDContainer>
-        <NameContainer>Name: {"Feridun Hamdullahpur"}</NameContainer>
-        <IDContainer>{190258281}</IDContainer>
+        <NameContainer>Name: {profile && profile.name}</NameContainer>
+        <IDContainer>{profile && profile.id}</IDContainer>
       </NameIDContainer>
       <BioContainer>
         <BioParagraph>
-          {`A veteran of the hackathon scene, Feridun takes them on with a nonchalant
-         approach to building a project. You can find him on reddit posting memes 
-         about himself before starting his project hours before the deadline. 
-         Yet somehow, he almost always places as a finalist ¯\\_(ツ)_/¯`}
+          {profile && profile.bio}
         </BioParagraph>
       </BioContainer>
-      <StatusContainer>Checked In: {false}</StatusContainer>
+      <StatusContainer>Checked In: {`${profile && profile.checked_in}`}</StatusContainer>
       <ProfileActionDetails />
     </ProfileDetailsContainer>
   );
