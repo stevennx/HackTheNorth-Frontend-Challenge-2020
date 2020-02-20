@@ -12,7 +12,7 @@ const validateCredentials = ({ email, password }: Credentials) =>
 export default ({ email, password, history } : ActionParams): LoginActionType => {
   const credentials = { email: email, password: password }
   if (validateCredentials(credentials)) {
-    history.push("/profile")
+    // history.push("/profile")
     return {
       type: LOGIN_USER_SUCCESS,
       payload: {
@@ -20,7 +20,7 @@ export default ({ email, password, history } : ActionParams): LoginActionType =>
       }
     };
   } else {
-    history.push("/login");
+    // history.push("/login");
     return {
       type: LOGIN_USER_ERROR,
       payload: {
