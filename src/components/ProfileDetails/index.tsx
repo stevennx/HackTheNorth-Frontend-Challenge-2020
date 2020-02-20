@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProfileActionDetails from "../ProfileActionDetails";
 import { Props } from "../ProfileCard";
+import Switch from "react-switch";
 
 const ProfileDetailsContainer = styled.div`
   width: 100%;
@@ -62,13 +63,25 @@ const BioParagraph = styled.p`
   padding-right: 16px;
 `;
 
-const StatusContainer = styled.div`
-  font-size: 16px;
-  color: #0E7C9F;
+const CheckedInContainer = styled.div`
+  margin-bottom: 16px;
+  > div {
+    float: right;
+  }
+`;
+
+const CheckedInText = styled.span`
+  font-size: 18px;
+  color: #5bd7ff;
+  line-height: 28px;
+  float: left;
+  font-weight: 600 !important;
 `;
 
 const ProfileDetails = ({ profile, requestProfile }: Props) => {
-  const [checkedIn, setCheckIn] = useState<boolean>((profile && profile.checked_in) || false);
+  const [checkedIn, setCheckIn] = useState<boolean>(
+    (profile && profile.checked_in) || false
+  );
 
   useEffect(() => {
     requestProfile();
@@ -85,7 +98,24 @@ const ProfileDetails = ({ profile, requestProfile }: Props) => {
       <BioContainer>
         <BioParagraph>{profile && profile.bio}</BioParagraph>
       </BioContainer>
-      <ProfileActionDetails />
+      <CheckedInContainer>
+        <CheckedInText>{checkedIn ? "Checked In " : "Check In "}</CheckedInText>
+        <Switch
+          checked={checkedIn}
+          onChange={() => setCheckIn(!checkedIn)}
+          onColor="#86d3ff"
+          onHandleColor="#2693e6"
+          handleDiameter={30}
+          uncheckedIcon={false}
+          checkedIcon={false}
+          boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
+          activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+          height={20}
+          width={48}
+          className="react-switch"
+          id="material-switch"
+        />
+      </CheckedInContainer>
     </ProfileDetailsContainer>
   );
 };
