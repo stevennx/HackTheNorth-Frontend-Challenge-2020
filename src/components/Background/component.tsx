@@ -1,6 +1,7 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import styled from "styled-components";
 import { Props } from "./index"
+import { Coordinates } from "../../redux/modules/Background/types"
 
 const BackgroundContainer = styled.div`
   position: relative;
@@ -63,16 +64,33 @@ const Background: React.FC<Props> = ({ children, fireRippleEffect }) => {
       y: topOffset + height / 2
     };
   };
+
+  const [logoCoordinates, setLogoCoordinates] = useState<Coordinates>({x: -1, y: -1});
+
+  // Set an event listener to change logo coordinates on screen resize
+  useLayoutEffect(() => {
+    const updateLogoCoordinates = () => {
+      const { x, y } = logoCenterCoordinates();
+      setLogoCoordinates({x: x, y: y})
+    }
+    updateLogoCoordinates();
+
+    window.addEventListener('resize', updateLogoCoordinates);
+    return () => window.removeEventListener('resize', updateLogoCoordinates);
+  }, [])
   
   // Start firing ripples once all components have rendered
   useLayoutEffect(() => {
-    const { x, y } = logoCenterCoordinates();
+    const {x: x, y: y} = logoCoordinates; 
+
+    if (x <= -1 || y <= -1) return;
+
     const $background = $("#main") as any;
     fireRippleEffect({
       x: x, 
       y: y, 
       $background: $background
-    })}, [fireRippleEffect]);
+    })}, [fireRippleEffect, logoCoordinates, logoCoordinates]);
 
   return (
     <BackgroundContainer>
