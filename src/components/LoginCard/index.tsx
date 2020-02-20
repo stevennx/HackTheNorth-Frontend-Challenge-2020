@@ -17,6 +17,8 @@ const Image = styled.img`
     height: 150px;
     pointer-events: none;
     opacity: 0.9;
+
+    margin-top: auto;
 `
 
 const Title = styled.span`
