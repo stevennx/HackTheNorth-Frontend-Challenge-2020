@@ -6,7 +6,7 @@ import { Props } from "../ProfileCard";
 const ProfileDetailsContainer = styled.div`
   width: 100%;
   height: 50%;
-  margin-top: 130px;
+  margin-top: 120px;
   padding: 0 50px;
 
   display: flex;
@@ -23,7 +23,7 @@ const NameContainer = styled.span`
   font-size: 36px;
   color: #5BD7FF;
   line-height: 36px;
-  font-weight: 700;
+  font-weight: 600 !important;
 `;
 
 const TypeIdContainer = styled.div`
@@ -47,7 +47,7 @@ const IDContainer = styled.span`
 `;
 
 const BioContainer = styled.div`
-  margin: 20px 0;
+  margin: 16px 0;
   max-height: 150px;
   overflow: scroll;
 `;
