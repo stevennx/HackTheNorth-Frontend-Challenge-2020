@@ -31,7 +31,7 @@ const ProfileCard = () => {
   return (
     <ProfileCardContainer>
       <BackgroundImage src={ProfileBackgroundImage} alt={""} />
-      <ProfileImage src={Logo} alt={""} />
+      <ProfileImage src={Logo} alt={""} id={"logo"}/>
       <ProfileDetails />
     </ProfileCardContainer>
   );
