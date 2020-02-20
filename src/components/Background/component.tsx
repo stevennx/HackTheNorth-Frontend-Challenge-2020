@@ -72,7 +72,7 @@ const Background: React.FC<Props> = ({ children, fireRippleEffect }) => {
       x: x, 
       y: y, 
       $background: $background
-    })}, []);
+    })}, [fireRippleEffect]);
 
   return (
     <BackgroundContainer>
