@@ -10,10 +10,14 @@ const BackgroundContainer = styled.div`
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url("https://hcti.io/v1/image/3d901d64-e7a5-4d3e-99f2-38e278cac88a");
+  background: url("https://hcti.io/v1/image/90c90c06-1674-485e-917b-2d9ead6d6bcd");
+
+  min-width: 320px;
+  min-height: 700px;
 
   * {
     box-sizing: border-box;
+    font-family: monospace;
   }
 `;
 
@@ -23,13 +27,18 @@ const CardContainer = styled.div`
   left: 50%;
   top: 50%;
 
-  width: 400px;
-  height: 550px;
+  width: 450px;
+  height: 750px;
   background: #4d3585;
   background-color: transparent;
   > div {
     width: 100%;
     height: 100%;
+  }
+
+  @media only screen and (max-width: 450px) {
+    width: 100vw; 
+    height: 100vh;
   }
 `;
 
