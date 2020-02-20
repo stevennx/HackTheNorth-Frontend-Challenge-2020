@@ -21,7 +21,7 @@ const ProfileDetailsContainer = styled.div`
 const NameContainer = styled.span`
   float: left;
   font-size: 36px;
-  color: #5BD7FF;
+  color: #0e7c9f;
   line-height: 36px;
   font-weight: 600 !important;
 `;
@@ -85,7 +85,7 @@ const ProfileDetails = ({ profile, requestProfile }: Props) => {
         <BioParagraph>{profile && profile.bio}</BioParagraph>
       </BioContainer>
       <StatusContainer>
-        Checked In: {`${checkedIn}`}
+        {checkedIn && `Checked In: ${checkedIn}`}
       </StatusContainer>
       <ProfileActionDetails />
     </ProfileDetailsContainer>
