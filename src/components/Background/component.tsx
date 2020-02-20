@@ -79,7 +79,7 @@ const Background: React.FC<Props> = ({ children, fireRippleEffect }) => {
   
   // Start firing ripples once all components have rendered
   useLayoutEffect(() => {
-    const {x: x, y: y} = logoCoordinates; 
+    const {x , y} = logoCoordinates; 
 
     if (x <= -1 || y <= -1) return;
 
@@ -88,7 +88,7 @@ const Background: React.FC<Props> = ({ children, fireRippleEffect }) => {
       x: x, 
       y: y, 
       $background: $background
-    })}, [fireRippleEffect, logoCoordinates, logoCoordinates]);
+    })}, [fireRippleEffect, logoCoordinates]);
 
   return (
     <BackgroundContainer>
