@@ -10,7 +10,7 @@ const BackgroundContainer = styled.div`
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url("https://hcti.io/v1/image/a0c0a72e-d150-4b81-b285-a356793a24b4");
+  background: url("https://hcti.io/v1/image/3d901d64-e7a5-4d3e-99f2-38e278cac88a");
 
   * {
     box-sizing: border-box;
@@ -52,9 +52,12 @@ const Background: React.FC<Props> = ({ children }) => {
     const { x, y } = logoCenterCoordinates();
     const $background = $("#main") as any;
     $background.ripples({
-      interactive: false
+      interactive: false,
+      resolution: 400,
+      dropRadius: 40,
+      perturbance: 0.15
     });
-    $background.ripples("drop", x, y, 80, 1);
+    $background.ripples("drop", x, y, 40, 0.15);
   }, []);
 
   return (
