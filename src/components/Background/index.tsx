@@ -10,7 +10,6 @@ const BackgroundContainer = styled.div`
   position: relative;
   width: 100vw;
   height: 100vh;
-  background: url("https://hcti.io/v1/image/90c90c06-1674-485e-917b-2d9ead6d6bcd");
 
   min-width: 320px;
   min-height: 700px;
@@ -20,6 +19,15 @@ const BackgroundContainer = styled.div`
     font-family: monospace;
   }
 `;
+
+const BackgroundImage = styled.div `
+  width: 100%;
+  height: 100%;
+  background-image: url("https://hcti.io/v1/image/90c90c06-1674-485e-917b-2d9ead6d6bcd");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+`
 
 const CardContainer = styled.div`
   position: absolute;
@@ -37,7 +45,7 @@ const CardContainer = styled.div`
   }
 
   @media only screen and (max-width: 450px) {
-    width: 100vw; 
+    width: 100vw;
     height: 100vh;
   }
 `;
@@ -70,7 +78,8 @@ const Background: React.FC<Props> = ({ children }) => {
   }, []);
 
   return (
-    <BackgroundContainer id="main">
+    <BackgroundContainer>
+      <BackgroundImage id={"main"}/>
       <CardContainer>{children}</CardContainer>
     </BackgroundContainer>
   );
