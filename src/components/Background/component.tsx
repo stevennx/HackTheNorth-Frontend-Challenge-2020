@@ -1,10 +1,6 @@
 import React, { useLayoutEffect } from "react";
 import styled from "styled-components";
-
-interface Props {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  children?: any;
-}
+import { Props } from "./index"
 
 const BackgroundContainer = styled.div`
   position: relative;
@@ -20,14 +16,14 @@ const BackgroundContainer = styled.div`
   }
 `;
 
-const BackgroundImage = styled.div `
+const BackgroundImage = styled.div`
   width: 100%;
   height: 100%;
   background-image: url("https://hcti.io/v1/image/90c90c06-1674-485e-917b-2d9ead6d6bcd");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-`
+`;
 
 const CardContainer = styled.div`
   position: absolute;
@@ -50,8 +46,10 @@ const CardContainer = styled.div`
   }
 `;
 
-const Background: React.FC<Props> = ({ children }) => {
+const Background: React.FC<Props> = ({ children, fireRippleEffect }) => {
+
   const logoCenterCoordinates = () => {
+
     // Warning: Conversion cancer! I got lazy! :P
     const $logo = $("#logo").first();
     const offset = $logo.offset() as any;
@@ -65,21 +63,20 @@ const Background: React.FC<Props> = ({ children }) => {
       y: topOffset + height / 2
     };
   };
+  
+  // Start firing ripples once all components have rendered
   useLayoutEffect(() => {
     const { x, y } = logoCenterCoordinates();
     const $background = $("#main") as any;
-    $background.ripples({
-      interactive: false,
-      resolution: 400,
-      dropRadius: 40,
-      perturbance: 0.15
-    });
-    $background.ripples("drop", x, y, 40, 0.15);
-  }, []);
+    fireRippleEffect({
+      x: x, 
+      y: y, 
+      $background: $background
+    })}, []);
 
   return (
     <BackgroundContainer>
-      <BackgroundImage id={"main"}/>
+      <BackgroundImage id={"main"} />
       <CardContainer>{children}</CardContainer>
     </BackgroundContainer>
   );
