@@ -22,9 +22,9 @@ const Image = styled.img`
 `
 
 const Title = styled.span`
-    font-size: 48px;
+    font-size: 52px;
     font-weight: 600;
-    margin: 20px 0;
+    margin: 30px 0;
 
     color: white;
 `

@@ -14,26 +14,27 @@ const ProfileCardContainer = styled.div`
   border-radius: 10px;
 
   opacity: 0.95;
+  border: 6px solid #5BD7FF;
 `;
 
 const TopBackground = styled.div`
   width: 100%;
-  height: 25%;
+  height: 160px;
   background-color: #070a1c;
-  border-bottom: 1px solid #1bd6bd;
+  border-bottom: 6px solid #5BD7FF;
   border-opacity: 0.5;
 `;
 
 const ProfileImage = styled.img`
   position: absolute;
-  top: 90px;
+  top: 55px;
   cursor: pointer;
+  border: 6px solid #5BD7FF;
 
   border-radius: 50%;
   width: 200px;
   height: 200px;
   &:hover {
-    box-shadow: 0px 4px 8px #1bd6bd;
     width: 202px;
     height: 202px;
   }

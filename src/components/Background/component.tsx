@@ -19,7 +19,7 @@ const BackgroundContainer = styled.div`
 const BackgroundImage = styled.div`
   width: 100%;
   height: 100%;
-  background-image: url("https://hcti.io/v1/image/90c90c06-1674-485e-917b-2d9ead6d6bcd");
+  background-image: url("https://hcti.io/v1/image/9ada3f7d-280e-409f-a8f6-8d19e8ab4b9a");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;

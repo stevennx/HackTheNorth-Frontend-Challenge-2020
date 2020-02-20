@@ -21,12 +21,13 @@ const ProfileDetailsContainer = styled.div`
 const NameContainer = styled.span`
   float: left;
   font-size: 36px;
-  color: #1bd6bd;
+  color: #5BD7FF;
   line-height: 36px;
+  font-weight: 700;
 `;
 
 const TypeIdContainer = styled.div`
-  margin-top: 8px;
+  margin-top: 12px;
   span {
     color: white;
     font-size: 16px;
@@ -61,8 +62,8 @@ const BioParagraph = styled.p`
 `;
 
 const StatusContainer = styled.div`
-  font-size: 12px;
-  color: white;
+  font-size: 16px;
+  color: #0E7C9F;
 `;
 
 const ProfileDetails = ({ profile, requestProfile }: Props) => {

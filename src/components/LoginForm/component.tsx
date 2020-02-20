@@ -30,7 +30,7 @@ const Label = styled.label`
 `;
 
 const Input = styled.input`
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #20293c;
@@ -43,10 +43,10 @@ const Button = styled.button`
   width: 100%;
   margin-top: 15px;
   padding: 10px 15px;
-  background-color: rgb(70, 153, 179);
+  background-color: #1bd6bd;
   color: white;
   border-radius: 5px;
-  border: 1px solid rgb(70, 153, 179);
+  border: 1px solid #1bd6bd;
 
   font-size: 16px;
   font-weight: 700;
@@ -55,7 +55,7 @@ const Button = styled.button`
   :hover {
     cursor: pointer;
     background-color: black;
-    color: rgb(70, 153, 179);
+    color: #1bd6bd;
   }
 `;
 
