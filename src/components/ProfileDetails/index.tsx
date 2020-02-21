@@ -56,7 +56,8 @@ const IDContainer = styled.span`
 const BioContainer = styled.div`
   margin: 16px 0 8px 0;
   max-height: 150px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll
 `;
 
 const BioParagraph = styled.p`
