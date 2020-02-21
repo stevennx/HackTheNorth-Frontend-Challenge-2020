@@ -1,14 +1,28 @@
 # Hack the North 2020 Frontend Developer Challenge
+
+## Installation
+#### 1. Enable WebGL on browser https://superuser.com/questions/836832/how-can-i-enable-webgl-in-my-browser
+#### 2. Clone the repo 
+```shell
+git clone https://github.com/stevennx/HackTheNorth-Frontend-Challenge-2020.git
+```
+#### 3. Install dependencies and Run
+```shell
+cd HackTheNorth-Frontend-Challenge-2020
+npm i 
+npm start
+```
+
 Check it out! https://stevennx.github.io/HackTheNorth-Frontend-Challenge-2020/
 
 ## Tech Stack
-1. React & Styled Components
-2. Redux & Sagas
-3. Swal2
-4. Typescript
-5. JQuery Ripple Plugin
+- React & Styled Components
+- Redux & Sagas
+- Swal2
+- Typescript
+- JQuery Ripple Plugin
 
-## Writeup I
+## Writeup Part 1
 ### Design & Development
 An app that keeps pesky non-hackers out while displaying the profile of other hackers should have solid functionality with an appealing UI. Given the time constraint, I decided that a login page and a profile page is sufficient enough to meet our goals. As a result, most of my time was spent to ensure a solid UX flow for our hackers. 
 
@@ -31,7 +45,7 @@ An app that keeps pesky non-hackers out while displaying the profile of other ha
 
 3. **Ripple Effect** - Oh man! It just so happened that there was a [JQuery Plugin](https://www.npmjs.com/package/jquery.ripples) just for ripple animations! Although it's not the same as Stefan's design, we can all appreciate a rippling swimming pool as our background LOL. Making the ripple start at the Logo/Image wasn't too bad, but if resizing the page would mess up the starting point of the ripples! Also, I couldn't control the ripples with delays and reset them properly in a component! Fortunately, all I had to do was abstract the ripple events to our redux-sagas and hook window resize event listeners to signal our sagas on a page resize :D
 
-## Writeup II
+## Writeup Part 2
 ### Roadmap
 Since we've already setup redux and redux-sagas, along with a file structure that's easily adjustable to scale to over a hundred components, we'll look at other forms of optimization! 
 1. **Lazy Loading** - Even though we're only hitting one endpoint right now, in the future as this App grows, lazy loading using React Loadlable will be key to a fast user experience.
@@ -43,8 +57,6 @@ Since we've already setup redux and redux-sagas, along with a file structure tha
 ### Extra
 1. **Phone Call Functionality** - I did not implement restricting/allowing phone calls, but my approach would be to spawn Swal notifications and even extending it to use Twillio's API to make real phone calls.
 
-2. **Logout** - Since we don't have a logout button, the only way is to go to Devtools -> Applications Tab -> Local Storage -> Delete! 
-
-3. **Enable WebGL** - Please enable WebGL for better Ripple Animations https://superuser.com/questions/836832/how-can-i-enable-webgl-in-my-browser.
+2. **Logout** - Since we don't have a logout button, we have to clear session storage and refresh. Go to Chrome Devtools -> Applications Tab -> Local Storage -> Delete! 
 
 
