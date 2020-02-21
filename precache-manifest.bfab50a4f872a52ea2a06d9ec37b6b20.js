@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "58a098cdf6c20673c9cfe69ca711d909",
+    "revision": "236eb4877425b4417e17d66c842cb722",
     "url": "/HackTheNorth-Frontend-Challenge-2020/index.html"
   },
   {
-    "revision": "9c7c116de4f37cd8316d",
+    "revision": "9461ad445d8386b0528c",
     "url": "/HackTheNorth-Frontend-Challenge-2020/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/HackTheNorth-Frontend-Challenge-2020/static/js/2.7b4d9849.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9c7c116de4f37cd8316d",
-    "url": "/HackTheNorth-Frontend-Challenge-2020/static/js/main.11632d84.chunk.js"
+    "revision": "9461ad445d8386b0528c",
+    "url": "/HackTheNorth-Frontend-Challenge-2020/static/js/main.a4ef822e.chunk.js"
   },
   {
     "revision": "bbc4d2a26bd1dfb2fac3",
