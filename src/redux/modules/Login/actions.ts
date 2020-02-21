@@ -7,7 +7,7 @@ import {
 } from "./types";
 
 const validateCredentials = ({ email, password }: Credentials) =>
-  email === "a" && password === "b";
+  email === "testing@gmail.com" && password === "password";
 
 export default ({ email, password, history } : ActionParams): LoginActionType => {
   const credentials = { email: email, password: password }
