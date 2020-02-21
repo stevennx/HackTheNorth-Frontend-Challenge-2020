@@ -18,7 +18,7 @@ const NextShiftComponent = ({ nextShift }: Props) => {
     const date = moment(new Date(nextShift));
   return (
     <SponsorContainer>
-      <span>{`Next Shift is at [${date.format('MMMM Do YYYY, h:mm:ss a')}]`}</span>
+      <span>{`Next Shift @ [${date.format('MMMM Do YYYY, h:mm:ss a')}]`}</span>
     </SponsorContainer>
   );
 };
