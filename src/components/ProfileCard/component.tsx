@@ -43,8 +43,7 @@ const ProfileImage = styled.img`
 const ProfileCard = ({ profile, requestProfile }: Props) => {
   useEffect(() => {
     requestProfile();
-    // eslint-disable-next-line
-  }, []);
+  }, [requestProfile]);
   return (
     <ProfileCardContainer>
       <TopBackground />

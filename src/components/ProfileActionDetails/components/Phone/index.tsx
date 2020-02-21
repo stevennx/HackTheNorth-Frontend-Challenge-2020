@@ -20,7 +20,6 @@ const PhoneNumberLabel = styled.a`
 `;
 
 const PhoneComponent = ({ phoneNumber, canCallNumber }: Props) => {
-  console.log(canCallNumber)
   const formatPhoneNumber = (phoneNumberString: string) => {
     const cleaned = ("" + phoneNumberString).replace(/\D/g, "");
     const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);

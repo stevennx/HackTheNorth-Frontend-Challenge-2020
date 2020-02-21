@@ -89,6 +89,10 @@ const ProfileDetails = ({ profile }: Props) => {
     profile.checked_in || false
   );
 
+  useEffect(() => {
+    setCheckIn(profile.checked_in || false);
+  }, [profile])
+
   return (
     <ProfileDetailsContainer>
       <NameContainer>{profile.name}</NameContainer>
