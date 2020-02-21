@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import ProfileDetails from "../ProfileDetails";
 import Logo from "../../static/not_hack_the_north.png";
@@ -14,14 +14,14 @@ const ProfileCardContainer = styled.div`
   border-radius: 10px;
 
   opacity: 0.95;
-  border: 6px solid #5BD7FF;
+  border: 6px solid #5bd7ff;
 `;
 
 const TopBackground = styled.div`
   width: 100%;
   height: 160px;
   background-color: #070a1c;
-  border-bottom: 6px solid #5BD7FF;
+  border-bottom: 6px solid #5bd7ff;
   border-opacity: 0.5;
 `;
 
@@ -29,7 +29,7 @@ const ProfileImage = styled.img`
   position: absolute;
   top: 55px;
   cursor: pointer;
-  border: 6px solid #5BD7FF;
+  border: 6px solid #5bd7ff;
 
   border-radius: 50%;
   width: 200px;
@@ -41,6 +41,10 @@ const ProfileImage = styled.img`
 `;
 
 const ProfileCard = ({ profile, requestProfile }: Props) => {
+  useEffect(() => {
+    requestProfile();
+    // eslint-disable-next-line
+  }, []);
   return (
     <ProfileCardContainer>
       <TopBackground />
@@ -50,7 +54,7 @@ const ProfileCard = ({ profile, requestProfile }: Props) => {
         id={"logo"}
         onClick={() => requestProfile()}
       />
-      <ProfileDetails profile={profile} requestProfile={requestProfile} />
+      {profile && <ProfileDetails profile={profile} />}
     </ProfileCardContainer>
   );
 };

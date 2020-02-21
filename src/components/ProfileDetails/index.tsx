@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ProfileActionDetails from "../ProfileActionDetails";
-import { Props } from "../ProfileCard";
 import Switch from "react-switch";
+import { AttendeeProfile } from "../../redux/modules/Profile/types";
+import { requestProfile } from "../../redux/modules/Profile/actions";
+
+type Props = {
+  profile: AttendeeProfile;
+};
 
 const ProfileDetailsContainer = styled.div`
   width: 100%;
   height: 50%;
   margin-top: 120px;
+  margin-bottom: auto;
   padding: 0 50px;
 
   display: flex;
@@ -78,48 +84,41 @@ const CheckedInText = styled.span`
   font-weight: 600 !important;
 `;
 
-const ProfileDetails = ({ profile, requestProfile }: Props) => {
+const ProfileDetails = ({ profile }: Props) => {
   const [checkedIn, setCheckIn] = useState<boolean>(
-    (profile && profile.checked_in) || false
+    profile.checked_in || false
   );
-
-  useEffect(() => {
-    requestProfile();
-    // eslint-disable-next-line
-  }, []);
 
   return (
     <ProfileDetailsContainer>
-      <NameContainer>{profile && profile.name}</NameContainer>
+      <NameContainer>{profile.name}</NameContainer>
       <TypeIdContainer>
-        <TypeContainer>{profile && profile.type.toUpperCase()}</TypeContainer>
-        <IDContainer>{profile && profile.id}</IDContainer>
+        <TypeContainer>{profile.type.toUpperCase()}</TypeContainer>
+        <IDContainer>{profile.id}</IDContainer>
       </TypeIdContainer>
       <BioContainer>
-        <BioParagraph>{profile && profile.bio}</BioParagraph>
+        <BioParagraph>{profile.bio}</BioParagraph>
       </BioContainer>
-      {profile && (
-        <CheckedInContainer>
-          <CheckedInText>
-            {checkedIn ? "Checked In " : "Check In "}
-          </CheckedInText>
-          <Switch
-            checked={checkedIn}
-            onChange={() => setCheckIn(!checkedIn)}
-            onColor="#86d3ff"
-            onHandleColor="#2693e6"
-            handleDiameter={30}
-            uncheckedIcon={false}
-            checkedIcon={false}
-            boxShadow="0px 1px 5px rgba(0, 0, 0, 0.6)"
-            activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
-            height={20}
-            width={48}
-            className="react-switch"
-            id="material-switch"
-          />
-        </CheckedInContainer>
-      )}
+
+      <CheckedInContainer>
+        <CheckedInText>{checkedIn ? "Checked In " : "Check In "}</CheckedInText>
+        <Switch
+          checked={checkedIn}
+          onChange={() => setCheckIn(!checkedIn)}
+          onColor="#86d3ff"
+          onHandleColor="#2693e6"
+          handleDiameter={30}
+          uncheckedIcon={false}
+          checkedIcon={false}
+          activeBoxShadow="0px 0px 1px 10px rgba(0, 0, 0, 0.2)"
+          height={20}
+          width={48}
+          className="react-switch"
+          id="material-switch"
+          disabled={!profile.actions.find(action => action === "check_in")}
+        />
+      </CheckedInContainer>
+      <ProfileActionDetails profile={profile} />
     </ProfileDetailsContainer>
   );
 };
