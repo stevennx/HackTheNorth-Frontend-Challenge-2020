@@ -7,7 +7,13 @@ export function* fireErrorAlert(action: ErrorAlertActionType) {
     Swal.fire({
       icon: "error",
       title: action.payload.errorMessage,
-      text: "Something went wrong!"
+      text: "Something went wrong!",
+      showClass: {
+        popup: 'animated fadeInDown fast'
+      },
+      hideClass: {
+        popup: 'animated fadeOutUp fast'
+      }
     })
   );
 }

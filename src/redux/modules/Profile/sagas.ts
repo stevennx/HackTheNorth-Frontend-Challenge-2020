@@ -36,6 +36,12 @@ export function* getProfileFailure() {
       confirmButtonText: "Try Again!",
       preConfirm: () => {
         store.dispatch(requestProfile());
+      },
+      showClass: {
+        popup: 'animated fadeInDown faster'
+      },
+      hideClass: {
+        popup: 'animated fadeOutUp faster'
       }
     })
   );
