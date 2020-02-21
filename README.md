@@ -1,7 +1,7 @@
 # Hack the North 2020 Frontend Developer Challenge
 
 ## Installation
-#### 1. Enable WebGL on browser https://superuser.com/questions/836832/how-can-i-enable-webgl-in-my-browser
+#### 1. Enable WebGL https://superuser.com/questions/836832/how-can-i-enable-webgl-in-my-browser
 #### 2. Clone the repo 
 ```
 git clone https://github.com/stevennx/HackTheNorth-Frontend-Challenge-2020.git
