@@ -21,7 +21,7 @@
     "@types/redux": "^3.6.0",
     "@types/styled-components": "^4.4.3",
     "animate.css": "^3.7.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "install": "^0.13.0",
     "lodash.get": "^4.4.2",
     "moment": "^2.24.0",
